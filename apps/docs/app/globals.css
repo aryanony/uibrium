@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+    --primary: 245 58% 51%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 224 71% 25%; /* Darkened for better visibility */
+    --accent: 220 14% 96%;
+    --accent-foreground: 224 71% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
+    --success: 142 71% 45%;
+    --success-foreground: 210 20% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 210 20% 98%;
+    --info: 199 89% 48%;
+    --info-foreground: 210 20% 98%;
+    --border: 220 13% 85%; /* Slightly more visible border */
+    --input: 220 13% 91%;
+    --ring: 245 58% 51%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 224 71% 2%;
+    --foreground: 210 20% 98%;
+    --card: 224 71% 2%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71% 2%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 245 58% 51%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 28% 12%;
+    --muted-foreground: 218 11% 65%;
+    --accent: 215 28% 12%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 20% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 210 20% 98%;
+    --warning: 32 95% 44%;
+    --warning-foreground: 210 20% 98%;
+    --info: 200 98% 39%;
+    --info-foreground: 210 20% 98%;
+    --border: 215 28% 12%;
+    --input: 215 28% 12%;
+    --ring: 245 58% 51%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    cursor: none !important;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight text-foreground/90;
+  }
+
+  p {
+    @apply leading-relaxed text-muted-foreground/90;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .bg-grid-white {
+    background-size: 50px 50px;
+    background-image: 
+      linear-gradient(to right, rgb(255 255 255 / 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.03) 1px, transparent 1px);
+  }
+
+  .bg-grid-black {
+    background-size: 50px 50px;
+    background-image: 
+      linear-gradient(to right, rgb(0 0 0 / 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(0 0 0 / 0.03) 1px, transparent 1px);
+  }
+
+  .glass {
+    @apply bg-background/40 backdrop-blur-2xl border border-white/5 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+  }
+
+  .grain {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200%;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: grain 8s steps(10) infinite;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 9999;
+  }
+}
+
+@keyframes grain {
+  0%, 100% { transform:translate(0, 0) }
+  10% { transform:translate(-5%, -10%) }
+  20% { transform:translate(-15%, 5%) }
+  30% { transform:translate(7%, -25%) }
+  40% { transform:translate(-5%, 25%) }
+  50% { transform:translate(-15%, 10%) }
+  60% { transform:translate(15%, 0%) }
+  70% { transform:translate(0%, 15%) }
+  80% { transform:translate(3%, 35%) }
+  90% { transform:translate(-10%, 10%) }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/10 rounded-full border-4 border-solid border-background hover:bg-muted-foreground/20 transition-colors;
+}

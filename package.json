@@ -1,0 +1,40 @@
+{
+  "name": "uibrium-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "UiBrium — Build Smarter, Ship Faster. A production-grade React UI Component Library.",
+  "scripts": {
+    "dev": "pnpm --filter \"@uibrium/*\" --parallel dev",
+    "dev:docs": "pnpm --filter @uibrium/docs dev",
+    "build": "pnpm --filter \"@uibrium/*\" build",
+    "build:docs": "pnpm --filter @uibrium/docs build",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,css}\"",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.4.0",
+    "@storybook/addon-interactions": "^8.4.0",
+    "@storybook/addon-links": "^8.4.0",
+    "@storybook/blocks": "^8.4.0",
+    "@storybook/react": "^8.4.0",
+    "@storybook/react-vite": "^8.4.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.11.0",
+    "prettier": "^3.2.0",
+    "storybook": "^8.4.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@9.1.0"
+}

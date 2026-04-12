@@ -1,0 +1,162 @@
+/**
+ * UiBrium — Global CSS Variables (Theme Layer)
+ *
+ * All component styles reference these CSS custom properties,
+ * making the entire library themeable by overriding variables.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ── Layout ── */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    /* ── Card ── */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    /* ── Popover ── */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* ── Primary ── */
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 100%;
+    --primary-50: 226 100% 97%;
+    --primary-100: 226 100% 94%;
+    --primary-200: 228 96% 89%;
+    --primary-300: 230 94% 82%;
+    --primary-400: 234 89% 74%;
+    --primary-500: 239 84% 67%;
+    --primary-600: 243 75% 59%;
+    --primary-700: 245 58% 51%;
+    --primary-800: 244 55% 41%;
+    --primary-900: 242 47% 34%;
+    --primary-950: 244 47% 20%;
+
+    /* ── Secondary ── */
+    --secondary: 271 91% 65%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-50: 270 100% 98%;
+    --secondary-100: 269 100% 95%;
+    --secondary-200: 269 100% 92%;
+    --secondary-300: 269 97% 85%;
+    --secondary-400: 270 95% 75%;
+    --secondary-500: 271 91% 65%;
+    --secondary-600: 271 81% 56%;
+    --secondary-700: 272 72% 47%;
+    --secondary-800: 273 67% 39%;
+    --secondary-900: 274 66% 32%;
+    --secondary-950: 274 87% 21%;
+
+    /* ── Muted ── */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* ── Accent ── */
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    /* ── Destructive ── */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* ── Success ── */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* ── Warning ── */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* ── Info ── */
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    /* ── Border / Input / Ring ── */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 239 84% 67%;
+
+    /* ── Radius ── */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 217 33% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217 33% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 100%;
+    --primary-50: 244 47% 15%;
+    --primary-100: 244 47% 20%;
+    --primary-200: 242 47% 28%;
+    --primary-300: 242 47% 34%;
+    --primary-400: 244 55% 41%;
+    --primary-500: 239 84% 67%;
+    --primary-600: 234 89% 74%;
+    --primary-700: 230 94% 82%;
+    --primary-800: 228 96% 89%;
+    --primary-900: 226 100% 94%;
+    --primary-950: 226 100% 97%;
+
+    --secondary: 271 91% 65%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-50: 274 87% 15%;
+    --secondary-100: 274 66% 22%;
+    --secondary-200: 273 67% 29%;
+    --secondary-300: 272 72% 37%;
+    --secondary-400: 271 81% 46%;
+    --secondary-500: 271 91% 65%;
+    --secondary-600: 270 95% 75%;
+    --secondary-700: 269 97% 85%;
+    --secondary-800: 269 100% 92%;
+    --secondary-900: 269 100% 95%;
+    --secondary-950: 270 100% 98%;
+
+    --muted: 217 33% 14%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 217 33% 14%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 32 95% 44%;
+    --warning-foreground: 0 0% 100%;
+
+    --info: 200 98% 39%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 239 84% 67%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+}
