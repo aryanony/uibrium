@@ -1,5 +1,5 @@
 {
-  "name": "uibrium",
+  "name": "@uibrium/ui",
   "version": "1.0.0",
   "description": "UiBrium — Build Smarter, Ship Faster. A production-grade React UI Component Library.",
   "type": "module",
