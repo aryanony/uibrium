@@ -1,4 +1,4 @@
-```markdown
+markdown
 # Uibrium — Balanced UI. Infinite Possibilities.
 
 <picture>
