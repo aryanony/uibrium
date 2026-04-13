@@ -1,5 +1,5 @@
 markdown
-# Uibrium — Balanced UI. Infinite Possibilities.
+# Uibrium — Build Smarter. Ship Faster.
 
 <picture>
   <source srcset="lightMode.png" media="(prefers-color-scheme: light)">
