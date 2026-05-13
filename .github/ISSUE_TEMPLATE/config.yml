@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/aryanony/uibrium/discussions
+    about: Ask questions, share ideas, or discuss Uibrium — not for bug reports.
+  - name: 📖 Documentation
+    url: https://uibrium.vercel.app
+    about: Check our docs before opening an issue — your answer might already be there.

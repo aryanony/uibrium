@@ -1,0 +1,86 @@
+name: Feature Request
+description: Suggest a new component or feature for Uibrium
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ✨ Feature Request
+
+        Thank you for helping improve Uibrium! Please describe your idea below.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      description: What type of feature are you requesting?
+      options:
+        - New Component
+        - Component Enhancement
+        - New Hook
+        - New Utility
+        - Documentation
+        - Performance
+        - Accessibility
+        - Developer Experience
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Component / Feature name
+      description: What would you like to name this component or feature?
+      placeholder: "e.g. DatePicker, Toast, useDebounce"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem it solves
+      description: What problem does this feature solve? Why is it needed?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution / API design
+      description: How do you envision this feature working? Show example usage if possible.
+      placeholder: |
+        <DatePicker
+          value={date}
+          onChange={setDate}
+          variant="primary"
+          minDate={new Date()}
+        />
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you considered any alternative approaches?
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Links to other libraries, design specs, or examples that inspired this request.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues/discussions and this is not a duplicate
+          required: true
+        - label: I am willing to work on this feature (optional)
+          required: false
