@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@uibrium/ui": "workspace:*",
-    "framer-motion": "^11.0.0",
+    "framer-motion": "^12.38.0",
     "lucide-react": "^0.378.0",
     "next": "^14.2.0",
     "react": "^18.3.0",
