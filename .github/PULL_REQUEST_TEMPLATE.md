@@ -1,40 +1,37 @@
-## What does this PR do?
+## 📝 Description
 
-<!-- Brief description of changes -->
+Please include a summary of the changes and the related issue. List any dependencies that are required for this change.
 
-## Type of change
+Fixes # (issue)
 
-- [ ] 🐛 Bug fix
-- [ ] ✨ New component/feature
-- [ ] 📝 Documentation update
-- [ ] 🎨 Style/design update
-- [ ] ♿ Accessibility improvement
-- [ ] 📖 Storybook story added
+## 🚀 Type of Change
 
-## Component(s) affected
+- [ ] 🐛 Bug fix (non-breaking change which fixes an issue)
+- [ ] ✨ New feature (non-breaking change which adds functionality)
+- [ ] 💥 Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] 📚 Documentation update
+- [ ] 🎨 Refactor / Styling update
 
-<!-- List the components changed -->
+## 🧪 How Has This Been Tested?
 
-## How to test
+Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce.
 
-<!-- Steps to verify the changes work -->
+- [ ] Tested locally with Storybook
+- [ ] Verified responsive design
+- [ ] Accessibility check (Aria labels, Keyboard navigation)
 
-1.
-2.
+## 📸 Screenshots (if applicable)
 
-## Screenshots / Preview (if UI change)
+| Before | After |
+| ------ | ----- |
+|        |       |
 
-<!-- Before / After screenshots -->
+## ✅ Checklist
 
-## Checklist
-
-- [ ] My code follows the Uibrium style guide (TypeScript + Tailwind + Radix)
-- [ ] I've tested in both light and dark mode
-- [ ] I've checked keyboard navigation works
-- [ ] I've run `pnpm build` and it passes
-- [ ] I've updated docs/stories if needed
-- [ ] No console errors or warnings
-
-## Related issue
-
-Closes #<!-- issue number -->
+- [ ] My code follows the style guidelines of this project
+- [ ] I have performed a self-review of my code
+- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] I have made corresponding changes to the documentation
+- [ ] My changes generate no new warnings
+- [ ] I have added tests that prove my fix is effective or that my feature works
+- [ ] New and existing unit tests pass locally with my changes

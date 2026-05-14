@@ -1,33 +1,91 @@
-# Contributing to Uibrium 🎯
+# Contributing to UiBrium
 
-We are thrilled that you're interested in contributing to Uibrium! To make your experience as smooth as possible, we have organized our guidelines based on your experience level:
+First off, thank you for considering contributing to UiBrium! It's people like you that make UiBrium such a great tool for the developer community.
 
-## 🎓 For Beginners (First-Time Contributors)
+As a contributor, please help us keep this project open and inclusive by reading and following our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-If you are new to open source or this is your first time contributing to Uibrium, please start here:
-👉 **[The Uibrium Beginner Contributor Guide](Uibrium-Contributor-Guide.md)**
+## Technical Requirements
 
-This guide walks you through the entire process step-by-step:
+- **Node.js**: v18 or later
+- **pnpm**: v8 or later (This is a monorepo using pnpm workspaces)
 
-- Forking and cloning the repository
-- Running the project locally
-- Creating a branch and making a commit
-- Submitting your first Pull Request!
+## Development Environment Setup
 
-## 🚀 For Experienced Developers (Core UI Package)
+1. **Clone the repository**
 
-If you are already familiar with the open-source workflow and want to dive straight into building components or fixing complex bugs, please refer to our main technical guide:
-👉 **[The Core UI Contributing Guide](packages/ui/CONTRIBUTING.md)**
+   ```bash
+   git clone https://github.com/aryanony/uibrium.git
+   cd uibrium
+   ```
 
-This guide covers:
+2. **Install dependencies**
 
-- Monorepo architecture
-- Component creation checklist
-- Styling conventions (Tailwind + HSL)
-- Radix UI accessibility standards
+   ```bash
+   pnpm install
+   ```
+
+3. **Start development servers**
+   - **Storybook** (for component development):
+     ```bash
+     pnpm storybook
+     ```
+   - **Documentation** (for docs changes):
+     ```bash
+     pnpm dev:docs
+     ```
+
+## Contribution Process
+
+### 1. Claiming an Issue
+
+- Browse the [issues](https://github.com/aryanony/uibrium/issues).
+- If you find one you'd like to work on, comment on the issue.
+- Wait for a maintainer to assign it to you.
+
+### 2. Branch Naming
+
+Please use the following naming convention for your branches:
+
+- `feat/feature-name` for new features
+- `fix/bug-fix-name` for bug fixes
+- `docs/documentation-changes` for docs
+- `refactor/code-refactoring` for refactors
+
+### 3. Making Changes
+
+- Ensure your code follows the project's coding standards.
+- Run `pnpm lint` to check for style issues.
+- Run `pnpm typecheck` to ensure type safety.
+- If you're adding a component, ensure it has a corresponding `.stories.tsx` file (this is automated, see below).
+
+### 4. Commit Style
+
+We use [Conventional Commits](https://www.conventionalcommits.org/):
+
+- `feat: add new toast component`
+- `fix: resolve hydration error in navbar`
+- `docs: update installation steps`
+
+### 5. Submitting a Pull Request
+
+- Push your changes to your fork.
+- Open a PR against the `main` branch.
+- Fill out the PR template completely.
+
+## Component Guidelines
+
+When creating a new component:
+
+1. Create a directory in `packages/ui/src/components/[component-name]`.
+2. Implement the component in `[component-name].tsx`.
+3. Export it from `packages/ui/src/index.ts`.
+4. Run `pnpm storybook` to automatically generate the initial story file.
+5. Document the component's props using JSDoc comments for automatic documentation generation.
+
+## Need Help?
+
+Feel free to open a discussion or reach out to @aryanony.
 
 ---
 
-### Code of Conduct
-
-By participating in this project, you agree to abide by our Code of Conduct. Please be welcoming, inclusive, and respectful to everyone in the community.
+UiBrium — Architecting the Sanctuary of Interfaces.

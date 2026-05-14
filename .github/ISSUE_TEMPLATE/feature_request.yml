@@ -1,43 +1,23 @@
-name: Feature Request
-description: Suggest a new component or feature
-title: "[Feature]: "
+name: 🚀 Feature Request
+description: Suggest an idea for UiBrium
 labels: ["enhancement"]
 body:
-  - type: dropdown
+  - type: textarea
+    id: problem
     attributes:
-      label: Type
-      options:
-        - New Component
-        - Component Enhancement
-        - New Hook
-        - Documentation
-        - Performance
-        - Accessibility
+      label: Is your feature request related to a problem?
+      description: A concise description of what the problem is. Ex. I'm always frustrated when [...]
     validations:
       required: true
-
-  - type: input
-    attributes:
-      label: Component/Feature name
-      placeholder: "e.g. DatePicker, Toast"
-
   - type: textarea
+    id: solution
     attributes:
-      label: Problem it solves
-      description: What problem does this solve?
+      label: Describe the solution you'd like
+      description: A concise description of what you want to happen.
     validations:
       required: true
-
   - type: textarea
+    id: alternatives
     attributes:
-      label: Proposed solution / API design
-      placeholder: |
-        <DatePicker
-          value={date}
-          onChange={setDate}
-          variant="primary"
-        />
-
-  - type: textarea
-    attributes:
-      label: Alternatives considered
+      label: Describe alternatives you've considered
+      description: A concise description of any alternative solutions or features you've considered.

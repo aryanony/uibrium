@@ -7,6 +7,7 @@
 </picture>
 
 [![npm (scoped)](https://img.shields.io/npm/v/@uibrium/ui?style=flat-square)](https://www.npmjs.com/package/@uibrium/ui)
+[![CI](https://github.com/aryanony/uibrium/actions/workflows/ci.yml/badge.svg)](https://github.com/aryanony/uibrium/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/npm/l/@uibrium/ui?style=flat-square)](LICENSE)
 [![Docs](https://img.shields.io/website?down_color=lightgrey&down_message=offline&up_color=blue&up_message=online&url=https%3A%2F%2Fuibrium.vercel.app)](https://uibrium.vercel.app/)
 [![Storybook](https://img.shields.io/badge/Storybook-Deployed-ff4785?logo=storybook)](https://aryanony.github.io/uibrium/)
@@ -23,6 +24,7 @@ Uibrium is a **premium, open-source React design system and component library** 
 - ⚡ **Sensory Animations:** Breathtaking motion with [Framer Motion](https://www.framer.com/motion/) and magnetic “sensory engineering” (custom cursor, loaders, etc.), adding polished micro-interactions to your UI.
 - 🔀 **Tree-Shaking Ready:** Exports optimized ESM and CJS bundles (with `sideEffects: false`), so unused code is dropped in production builds. Every component is fully typed in TypeScript.
 - 🌐 **Theming:** Built-in light/dark themes using CSS variables. Swap or extend themes easily, leveraging Uibrium’s HSL token API.
+- 🤖 **Automated Documentation:** Fully automated Storybook story generation. Simply create a component, and the sanctuary handles the documentation for you.
 - 🌍 **Open Source:** Premium design accessible to all. Contributions are welcome – see [Contributing](#contributing).
 
 ## Installation

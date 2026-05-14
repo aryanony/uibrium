@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { Steps, Step } from '@/components/step';
 import { Callout } from '@/components/callout';
-import { Badge } from '@uibrium/ui';
+import { Badge, Card } from '@uibrium/ui';
 import { Terminal, Lightbulb, ShieldCheck, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -173,6 +174,3 @@ function App() {
     </div>
   );
 }
-
-import Link from 'next/link';
-import { Card } from '@uibrium/ui';

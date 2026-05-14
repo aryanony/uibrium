@@ -1,0 +1,23 @@
+name: 🧩 Component Request
+description: Request a new UI component for the library
+labels: ["component", "enhancement"]
+body:
+  - type: input
+    id: component_name
+    attributes:
+      label: Component Name
+      placeholder: e.g., Toast, Carousel, MultiSelect
+    validations:
+      required: true
+  - type: textarea
+    id: use_cases
+    attributes:
+      label: Use Cases
+      description: Why is this component needed? How will it be used?
+    validations:
+      required: true
+  - type: textarea
+    id: inspiration
+    attributes:
+      label: Inspiration / Examples
+      description: Link to existing components from other libraries (e.g., Radix, Shadcn, MUI).

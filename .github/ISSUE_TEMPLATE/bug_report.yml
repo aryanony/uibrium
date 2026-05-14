@@ -1,52 +1,37 @@
-name: Bug Report
-description: Report a bug in Uibrium
-title: "[Bug]: "
-labels: ["bug", "needs-triage"]
+name: 🐛 Bug Report
+description: Report a bug to help us improve UiBrium
+labels: ["bug"]
 body:
-  - type: input
+  - type: markdown
     attributes:
-      label: Component affected
-      placeholder: "e.g. Button, Dialog, Select"
-    validations:
-      required: true
-
+      value: |
+        Thanks for taking the time to fill out this bug report!
   - type: textarea
+    id: description
     attributes:
       label: Describe the bug
-      description: A clear description of what the bug is.
+      description: A clear and concise description of what the bug is.
+      placeholder: Bug description
     validations:
       required: true
-
   - type: textarea
+    id: reproduction
     attributes:
       label: Steps to reproduce
+      description: How can we reproduce this behavior?
       placeholder: |
-        1. Import Button from '@uibrium/ui'
-        2. Set variant="primary"
-        3. Click the button
-        4. See error
+        1. Go to '...'
+        2. Click on '....'
+        3. See error
     validations:
       required: true
-
   - type: textarea
+    id: expected
     attributes:
       label: Expected behavior
-    validations:
-      required: true
-
-  - type: input
+      description: A clear and concise description of what you expected to happen.
+  - type: textarea
+    id: context
     attributes:
-      label: Uibrium version
-      placeholder: "e.g. 1.0.0"
-
-  - type: dropdown
-    attributes:
-      label: Browser
-      options: [Chrome, Firefox, Safari, Edge, Other]
-
-  - type: checkboxes
-    attributes:
-      label: Checklist
-      options:
-        - label: I searched existing issues and this is not a duplicate
-          required: true
+      label: Additional Context
+      description: Browser version, OS, etc.

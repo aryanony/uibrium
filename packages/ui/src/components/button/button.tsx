@@ -162,11 +162,32 @@ export interface ButtonProps
   extends
     Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'color'>,
     VariantProps<typeof buttonVariants> {
+  /**
+   * Change the default rendered element for the one passed as a child, merging their props and behavior.
+   * @default false
+   */
   asChild?: boolean;
+  /**
+   * If true, the button will show a spinner and be disabled.
+   * @default false
+   */
   loading?: boolean;
+  /**
+   * The text to display next to the spinner when the button is in a loading state.
+   */
   loadingText?: string;
+  /**
+   * Element to be rendered before the button children.
+   */
   leftIcon?: React.ReactNode;
+  /**
+   * Element to be rendered after the button children.
+   */
   rightIcon?: React.ReactNode;
+  /**
+   * If true, the button will be styled as a square icon button.
+   * @default false
+   */
   iconOnly?: boolean;
 }
 

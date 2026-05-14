@@ -30,9 +30,16 @@ type PaginationLinkProps = {
 } & React.ComponentProps<'a'> &
   Pick<ButtonProps, 'size'>;
 
-const PaginationLink = ({ className, isActive, size = 'md', ...props }: PaginationLinkProps) => (
+const PaginationLink = ({
+  className,
+  isActive,
+  size = 'md',
+  'aria-label': ariaLabel,
+  ...props
+}: PaginationLinkProps) => (
   <a
     aria-current={isActive ? 'page' : undefined}
+    aria-label={ariaLabel || (isActive ? 'Current Page' : undefined)}
     className={cn(
       'inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
       isActive
