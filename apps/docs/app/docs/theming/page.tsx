@@ -5,7 +5,8 @@ import { Paintbrush, Palette, Wand2, Monitor } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Theming',
-  description: 'Learn how to customize the UiBrium design system with themes, tokens, and CSS variables.',
+  description:
+    'Learn how to customize the UiBrium design system with themes, tokens, and CSS variables.',
 };
 
 function ColorSwatch({ name, value }: { name: string; value: string }) {
@@ -28,13 +29,15 @@ export default function ThemingPage() {
     <div className="space-y-12 pb-20">
       <header className="space-y-4">
         <div className="flex items-center gap-2">
-          <Badge variant="subtle" color="primary" className="rounded-full">Flexible</Badge>
+          <Badge variant="subtle" color="primary" className="rounded-full">
+            Flexible
+          </Badge>
           <span className="text-xs text-muted-foreground font-medium">CSS Variables Powered</span>
         </div>
         <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">Theming</h1>
         <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
-          UiBrium is built from the ground up to be fully customizable. We use CSS Custom Properties (Variables) 
-          to provide a flexible and high-performance design system.
+          UiBrium is built from the ground up to be fully customizable. We use CSS Custom Properties
+          (Variables) to provide a flexible and high-performance design system.
         </p>
       </header>
 
@@ -44,12 +47,13 @@ export default function ThemingPage() {
           <h2 className="text-2xl font-bold tracking-tight">Theme Provider</h2>
         </div>
         <p className="text-muted-foreground leading-relaxed">
-          The <code className="px-1.5 py-0.5 rounded bg-muted text-foreground">ThemeProvider</code> is the root of your 
-          UiBrium application. It handles theme switching, persistence, and global configuration overrides.
+          The <code className="px-1.5 py-0.5 rounded bg-muted text-foreground">ThemeProvider</code>{' '}
+          is the root of your UiBrium application. It handles theme switching, persistence, and
+          global configuration overrides.
         </p>
         <div className="relative rounded-xl border bg-muted/50 p-6 font-mono text-sm group">
           <pre className="text-foreground">
-{`import { ThemeProvider } from '@uibrium/ui';
+            {`import { ThemeProvider } from '@uibrium/ui';
 
 <ThemeProvider
   defaultMode="system"
@@ -73,9 +77,10 @@ export default function ThemingPage() {
           <h2 className="text-2xl font-bold tracking-tight">Standard Palette</h2>
         </div>
         <p className="text-muted-foreground leading-relaxed">
-          We provide a curated set of HSL-based color scales that look stunning in both light and dark modes.
+          We provide a curated set of HSL-based color scales that look stunning in both light and
+          dark modes.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="space-y-3">
             <h3 className="font-bold flex items-center gap-2">
@@ -105,8 +110,10 @@ export default function ThemingPage() {
       </section>
 
       <Callout type="info" title="Why HSL?" icon={<Paintbrush className="h-5 w-5" />}>
-        We use HSL values because they make it incredibly easy to programmatically adjust opacity 
-        and create harmonious color scales using CSS&apos;s <code className="px-1 py-0.5 bg-muted rounded">color-mix</code> or simple variable manipulation.
+        We use HSL values because they make it incredibly easy to programmatically adjust opacity
+        and create harmonious color scales using CSS&apos;s{' '}
+        <code className="px-1 py-0.5 bg-muted rounded">color-mix</code> or simple variable
+        manipulation.
       </Callout>
 
       <section className="space-y-6">
@@ -115,11 +122,12 @@ export default function ThemingPage() {
           <h2 className="text-2xl font-bold tracking-tight">Global Overrides</h2>
         </div>
         <p className="text-muted-foreground">
-          You can override any variable in your global CSS file to create a completely custom brand identity.
+          You can override any variable in your global CSS file to create a completely custom brand
+          identity.
         </p>
         <div className="relative rounded-xl border bg-muted/50 p-6 font-mono text-sm group">
           <pre className="text-foreground">
-{`:root {
+            {`:root {
   /* Brand Overrides */
   --primary: 172 66% 50%;
   --primary-foreground: 0 0% 100%;
@@ -138,8 +146,9 @@ export default function ThemingPage() {
       </section>
 
       <Callout type="default" title="Design Tokens">
-        All variables are also exported as TypeScript tokens for use in JS-in-CSS or animation libraries 
-        like Framer Motion. Import them from <code className="px-1.5 py-0.5 rounded bg-muted text-foreground">@uibrium/ui/tokens</code>.
+        All variables are also exported as TypeScript tokens for use in JS-in-CSS or animation
+        libraries like Framer Motion. Import them from{' '}
+        <code className="px-1.5 py-0.5 rounded bg-muted text-foreground">@uibrium/ui/tokens</code>.
       </Callout>
     </div>
   );

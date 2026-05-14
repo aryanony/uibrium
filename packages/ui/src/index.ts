@@ -12,12 +12,7 @@
 
 export { Button, type ButtonProps } from './components/button';
 export { Input, type InputProps } from './components/input';
-export {
-  Alert,
-  AlertTitle,
-  AlertDescription,
-  type AlertProps,
-} from './components/alert';
+export { Alert, AlertTitle, AlertDescription, type AlertProps } from './components/alert';
 export { Checkbox, type CheckboxProps } from './components/checkbox';
 export { Switch, type SwitchProps } from './components/switch';
 export {
@@ -35,19 +30,8 @@ export {
   type DialogContentProps,
 } from './components/dialog';
 export { Tooltip, TooltipProvider, type TooltipProps } from './components/tooltip';
-export {
-  Tabs,
-  TabsList,
-  TabsTrigger,
-  TabsContent,
-  type TabsProps,
-} from './components/tabs';
-export {
-  Avatar,
-  AvatarGroup,
-  type AvatarProps,
-  type AvatarGroupProps,
-} from './components/avatar';
+export { Tabs, TabsList, TabsTrigger, TabsContent, type TabsProps } from './components/tabs';
+export { Avatar, AvatarGroup, type AvatarProps, type AvatarGroupProps } from './components/avatar';
 export {
   Select,
   SelectItem,
@@ -57,17 +41,22 @@ export {
   type SelectProps,
 } from './components/select';
 export { Badge, type BadgeProps } from './components/badge';
-export { 
-  Card, 
-  CardHeader, 
-  CardFooter, 
-  CardTitle, 
-  CardDescription, 
-  CardContent 
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
 } from './components/card';
 export { Textarea, type TextareaProps } from './components/textarea';
 export { RadioGroup, RadioGroupItem } from './components/radio';
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from './components/accordion';
+export {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from './components/accordion';
 export {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -122,8 +111,6 @@ export { AmbientBackground } from './components/ambient-background';
 export { Navbar, type NavbarProps } from './components/navbar';
 export { Footer, type FooterProps } from './components/footer';
 
-
-
 // ── Theme ──────────────────────────────────────────────────────────────────────
 
 export {
@@ -149,4 +136,13 @@ export { createSafeContext } from './utils/create-context';
 
 // ── Tokens ─────────────────────────────────────────────────────────────────────
 
-export { colors, spacing, fontFamily, fontSize, fontWeight, letterSpacing, radii, shadows } from './tokens';
+export {
+  colors,
+  spacing,
+  fontFamily,
+  fontSize,
+  fontWeight,
+  letterSpacing,
+  radii,
+  shadows,
+} from './tokens';

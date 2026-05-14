@@ -36,21 +36,33 @@ export const badgeVariants = cva(
       // Solid
       { variant: 'solid', color: 'default', className: 'bg-foreground text-background' },
       { variant: 'solid', color: 'primary', className: 'bg-primary text-primary-foreground' },
-      { variant: 'solid', color: 'destructive', className: 'bg-destructive text-destructive-foreground' },
+      {
+        variant: 'solid',
+        color: 'destructive',
+        className: 'bg-destructive text-destructive-foreground',
+      },
       { variant: 'solid', color: 'success', className: 'bg-success text-success-foreground' },
       { variant: 'solid', color: 'warning', className: 'bg-warning text-warning-foreground' },
       { variant: 'solid', color: 'info', className: 'bg-info text-info-foreground' },
       // Secondary
       { variant: 'secondary', color: 'default', className: 'bg-muted text-muted-foreground' },
       { variant: 'secondary', color: 'primary', className: 'bg-primary/20 text-primary' },
-      { variant: 'secondary', color: 'destructive', className: 'bg-destructive/20 text-destructive' },
+      {
+        variant: 'secondary',
+        color: 'destructive',
+        className: 'bg-destructive/20 text-destructive',
+      },
       { variant: 'secondary', color: 'success', className: 'bg-success/20 text-success' },
       { variant: 'secondary', color: 'warning', className: 'bg-warning/20 text-warning' },
       { variant: 'secondary', color: 'info', className: 'bg-info/20 text-info' },
       // Outline
       { variant: 'outline', color: 'default', className: 'text-foreground border-border' },
       { variant: 'outline', color: 'primary', className: 'text-primary border-primary/50' },
-      { variant: 'outline', color: 'destructive', className: 'text-destructive border-destructive/50' },
+      {
+        variant: 'outline',
+        color: 'destructive',
+        className: 'text-destructive border-destructive/50',
+      },
       { variant: 'outline', color: 'success', className: 'text-success border-success/50' },
       { variant: 'outline', color: 'warning', className: 'text-warning border-warning/50' },
       { variant: 'outline', color: 'info', className: 'text-info border-info/50' },
@@ -72,12 +84,11 @@ export const badgeVariants = cva(
       size: 'md',
       isPill: false,
     },
-  }
+  },
 );
 
 export interface BadgeProps
-  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'color'>,
-    VariantProps<typeof badgeVariants> {
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'color'>, VariantProps<typeof badgeVariants> {
   asChild?: boolean;
 }
 
@@ -91,7 +102,7 @@ export const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Badge.displayName = 'Badge';

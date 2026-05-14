@@ -4,18 +4,17 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { 
-  Menu, 
-  X, 
-  ChevronRight, 
-  Search, 
-  Github, 
-  Moon, 
+import {
+  Menu,
+  X,
+  ChevronRight,
+  Search,
+  Github,
+  Moon,
   Sun,
-  Layout,
   Package,
   Wrench,
-  BookOpen
+  BookOpen,
 } from 'lucide-react';
 import { cn, Button } from '@uibrium/ui';
 
@@ -82,12 +81,7 @@ function ThemeToggle() {
   };
 
   return (
-    <Button
-      variant="ghost"
-      size="sm"
-      onClick={toggle}
-      className="h-9 w-9 p-0"
-    >
+    <Button variant="ghost" size="sm" onClick={toggle} className="h-9 w-9 p-0">
       {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
     </Button>
   );
@@ -100,7 +94,7 @@ function Sidebar({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }
     <aside
       className={cn(
         'fixed inset-y-0 left-0 z-40 w-64 transform border-r bg-background transition-transform duration-300 lg:static lg:block lg:translate-x-0',
-        !isOpen && '-translate-x-full'
+        !isOpen && '-translate-x-full',
       )}
     >
       <div className="flex h-16 items-center border-b px-6 lg:hidden">
@@ -130,9 +124,9 @@ function Sidebar({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }
                         onClick={onClose}
                         className={cn(
                           'flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-all hover:bg-muted',
-                          isActive 
-                            ? 'bg-primary/10 text-primary' 
-                            : 'text-muted-foreground hover:text-foreground'
+                          isActive
+                            ? 'bg-primary/10 text-primary'
+                            : 'text-muted-foreground hover:text-foreground',
                         )}
                       >
                         {item.label}
@@ -174,11 +168,28 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
 
           <div className="hidden items-center gap-8 lg:flex">
             <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
-              <Image src="/logo.png" alt="UiBrium" width={130} height={36} priority className="-ml-1" />
+              <Image
+                src="/logo.png"
+                alt="UiBrium"
+                width={130}
+                height={36}
+                priority
+                className="-ml-1"
+              />
             </Link>
             <nav className="flex items-center gap-6 text-sm font-medium">
-              <Link href="/docs/getting-started" className="text-foreground transition-colors hover:text-primary">Docs</Link>
-              <a href="https://github.com/uibrium/uibrium" target="_blank" className="text-muted-foreground transition-colors hover:text-primary flex items-center gap-1">
+              <Link
+                href="/docs/getting-started"
+                className="text-foreground transition-colors hover:text-primary"
+              >
+                Docs
+              </Link>
+              <a
+                href="https://github.com/uibrium/uibrium"
+                target="_blank"
+                rel="noreferrer"
+                className="text-muted-foreground transition-colors hover:text-primary flex items-center gap-1"
+              >
                 GitHub <Github className="h-3 w-3" />
               </a>
             </nav>
@@ -203,11 +214,11 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
 
       <div className="mx-auto flex w-full max-w-[90rem] flex-1">
         <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-        
+
         {/* Backdrop for mobile */}
         {isSidebarOpen && (
-          <div 
-            className="fixed inset-0 z-30 bg-background/80 backdrop-blur-sm lg:hidden" 
+          <div
+            className="fixed inset-0 z-30 bg-background/80 backdrop-blur-sm lg:hidden"
             onClick={() => setIsSidebarOpen(false)}
           />
         )}

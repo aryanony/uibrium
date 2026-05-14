@@ -37,27 +37,93 @@ export const buttonVariants = cva(
     },
     compoundVariants: [
       // Solid Colors
-      { variant: 'solid', color: 'primary', className: 'bg-primary text-primary-foreground hover:bg-primary-600 active:bg-primary-700' },
-      { variant: 'solid', color: 'secondary', className: 'bg-secondary text-secondary-foreground hover:bg-secondary-600 active:bg-secondary-700' },
-      { variant: 'solid', color: 'destructive', className: 'bg-destructive text-destructive-foreground hover:bg-destructive/90 active:bg-destructive/80' },
-      { variant: 'solid', color: 'success', className: 'bg-success text-success-foreground hover:bg-success/90 active:bg-success/80' },
-      { variant: 'solid', color: 'warning', className: 'bg-warning text-warning-foreground hover:bg-warning/90 active:bg-warning/80' },
+      {
+        variant: 'solid',
+        color: 'primary',
+        className: 'bg-primary text-primary-foreground hover:bg-primary-600 active:bg-primary-700',
+      },
+      {
+        variant: 'solid',
+        color: 'secondary',
+        className:
+          'bg-secondary text-secondary-foreground hover:bg-secondary-600 active:bg-secondary-700',
+      },
+      {
+        variant: 'solid',
+        color: 'destructive',
+        className:
+          'bg-destructive text-destructive-foreground hover:bg-destructive/90 active:bg-destructive/80',
+      },
+      {
+        variant: 'solid',
+        color: 'success',
+        className: 'bg-success text-success-foreground hover:bg-success/90 active:bg-success/80',
+      },
+      {
+        variant: 'solid',
+        color: 'warning',
+        className: 'bg-warning text-warning-foreground hover:bg-warning/90 active:bg-warning/80',
+      },
       // Outline Colors
-      { variant: 'outline', color: 'primary', className: 'border-primary text-primary hover:bg-primary/10' },
-      { variant: 'outline', color: 'secondary', className: 'border-secondary text-secondary hover:bg-secondary/10' },
-      { variant: 'outline', color: 'destructive', className: 'border-destructive text-destructive hover:bg-destructive/10' },
-      { variant: 'outline', color: 'success', className: 'border-success text-success hover:bg-success/10' },
-      { variant: 'outline', color: 'warning', className: 'border-warning text-warning hover:bg-warning/10' },
+      {
+        variant: 'outline',
+        color: 'primary',
+        className: 'border-primary text-primary hover:bg-primary/10',
+      },
+      {
+        variant: 'outline',
+        color: 'secondary',
+        className: 'border-secondary text-secondary hover:bg-secondary/10',
+      },
+      {
+        variant: 'outline',
+        color: 'destructive',
+        className: 'border-destructive text-destructive hover:bg-destructive/10',
+      },
+      {
+        variant: 'outline',
+        color: 'success',
+        className: 'border-success text-success hover:bg-success/10',
+      },
+      {
+        variant: 'outline',
+        color: 'warning',
+        className: 'border-warning text-warning hover:bg-warning/10',
+      },
       // Soft Colors
-      { variant: 'soft', color: 'primary', className: 'bg-primary/10 text-primary hover:bg-primary/20' },
-      { variant: 'soft', color: 'secondary', className: 'bg-secondary/10 text-secondary hover:bg-secondary/20' },
-      { variant: 'soft', color: 'destructive', className: 'bg-destructive/10 text-destructive hover:bg-destructive/20' },
-      { variant: 'soft', color: 'success', className: 'bg-success/10 text-success hover:bg-success/20' },
-      { variant: 'soft', color: 'warning', className: 'bg-warning/10 text-warning hover:bg-warning/20' },
+      {
+        variant: 'soft',
+        color: 'primary',
+        className: 'bg-primary/10 text-primary hover:bg-primary/20',
+      },
+      {
+        variant: 'soft',
+        color: 'secondary',
+        className: 'bg-secondary/10 text-secondary hover:bg-secondary/20',
+      },
+      {
+        variant: 'soft',
+        color: 'destructive',
+        className: 'bg-destructive/10 text-destructive hover:bg-destructive/20',
+      },
+      {
+        variant: 'soft',
+        color: 'success',
+        className: 'bg-success/10 text-success hover:bg-success/20',
+      },
+      {
+        variant: 'soft',
+        color: 'warning',
+        className: 'bg-warning/10 text-warning hover:bg-warning/20',
+      },
       // Ghost Colors
       { variant: 'ghost', color: 'primary', className: 'text-primary hover:bg-primary/10' },
       { variant: 'ghost', color: 'secondary', className: 'text-secondary hover:bg-secondary/10' },
-      { variant: 'ghost', color: 'destructive', className: 'text-destructive hover:bg-destructive/10' },
+      {
+        variant: 'ghost',
+        color: 'destructive',
+        className: 'text-destructive hover:bg-destructive/10',
+      },
       { variant: 'ghost', color: 'success', className: 'text-success hover:bg-success/10' },
       { variant: 'ghost', color: 'warning', className: 'text-warning hover:bg-warning/10' },
     ],
@@ -66,7 +132,7 @@ export const buttonVariants = cva(
       color: 'primary',
       size: 'md',
     },
-  }
+  },
 );
 
 // ── Spinner ────────────────────────────────────────────────────────────────────
@@ -93,7 +159,8 @@ function ButtonSpinner({ className }: { className?: string }) {
 // ── Component ──────────────────────────────────────────────────────────────────
 
 export interface ButtonProps
-  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'color'>,
+  extends
+    Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'color'>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   loading?: boolean;
@@ -130,7 +197,10 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       return (
         <Slot
           ref={ref}
-          className={cn(buttonVariants({ variant, size, color, fullWidth, className }), iconOnly && 'aspect-square px-0')}
+          className={cn(
+            buttonVariants({ variant, size, color, fullWidth, className }),
+            iconOnly && 'aspect-square px-0',
+          )}
           {...props}
         >
           {children}
@@ -143,7 +213,10 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         type={type}
         disabled={isDisabled}
-        className={cn(buttonVariants({ variant, size, color, fullWidth, className }), iconOnly && 'aspect-square px-0')}
+        className={cn(
+          buttonVariants({ variant, size, color, fullWidth, className }),
+          iconOnly && 'aspect-square px-0',
+        )}
         {...props}
       >
         {loading && <ButtonSpinner />}

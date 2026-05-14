@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { cn } from '../../utils/cn';
 
-export interface TextareaProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   /** Label text for the textarea */
   label?: string;
   /** Visual variant */
@@ -55,7 +54,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
     const defaultId = React.useId();
     const textareaId = id || defaultId;
     const innerRef = React.useRef<HTMLTextAreaElement>(null);
-    
+
     // Combine refs
     React.useImperativeHandle(ref, () => innerRef.current as HTMLTextAreaElement);
 
@@ -67,7 +66,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         }
         onChange?.(e);
       },
-      [autoResize, onChange]
+      [autoResize, onChange],
     );
 
     return (
@@ -91,8 +90,10 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
               'disabled:cursor-not-allowed disabled:opacity-50',
               variant !== 'unstyled' && sizeStyles[size],
               variantStyles[variant],
-              isInvalid && variant !== 'unstyled' && 'border-destructive focus-visible:border-destructive focus-visible:ring-destructive/30',
-              autoResize && 'resize-none overflow-hidden'
+              isInvalid &&
+                variant !== 'unstyled' &&
+                'border-destructive focus-visible:border-destructive focus-visible:ring-destructive/30',
+              autoResize && 'resize-none overflow-hidden',
             )}
             {...props}
           />

@@ -21,8 +21,9 @@ export interface SelectProps extends SelectPrimitive.SelectProps {
   className?: string;
 }
 
-export interface SelectItemProps
-  extends React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item> {}
+export interface SelectItemProps extends React.ComponentPropsWithoutRef<
+  typeof SelectPrimitive.Item
+> {}
 
 // ── Size Styles ────────────────────────────────────────────────────────────────
 
@@ -36,24 +37,51 @@ const triggerSizes = {
 
 function ChevronDown({ className }: { className?: string }) {
   return (
-    <svg className={cn('h-4 w-4', className)} viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-      <path fillRule="evenodd" d="M4.22 6.22a.75.75 0 011.06 0L8 8.94l2.72-2.72a.75.75 0 111.06 1.06l-3.25 3.25a.75.75 0 01-1.06 0L4.22 7.28a.75.75 0 010-1.06z" clipRule="evenodd" />
+    <svg
+      className={cn('h-4 w-4', className)}
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fillRule="evenodd"
+        d="M4.22 6.22a.75.75 0 011.06 0L8 8.94l2.72-2.72a.75.75 0 111.06 1.06l-3.25 3.25a.75.75 0 01-1.06 0L4.22 7.28a.75.75 0 010-1.06z"
+        clipRule="evenodd"
+      />
     </svg>
   );
 }
 
 function CheckIcon({ className }: { className?: string }) {
   return (
-    <svg className={cn('h-4 w-4', className)} viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-      <path fillRule="evenodd" d="M12.416 3.376a.75.75 0 01.208 1.04l-5 7.5a.75.75 0 01-1.154.114l-3-3a.75.75 0 011.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 011.04-.207z" clipRule="evenodd" />
+    <svg
+      className={cn('h-4 w-4', className)}
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fillRule="evenodd"
+        d="M12.416 3.376a.75.75 0 01.208 1.04l-5 7.5a.75.75 0 01-1.154.114l-3-3a.75.75 0 011.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 011.04-.207z"
+        clipRule="evenodd"
+      />
     </svg>
   );
 }
 
 function ChevronUp({ className }: { className?: string }) {
   return (
-    <svg className={cn('h-4 w-4', className)} viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-      <path fillRule="evenodd" d="M11.78 9.78a.75.75 0 01-1.06 0L8 7.06 5.28 9.78a.75.75 0 01-1.06-1.06l3.25-3.25a.75.75 0 011.06 0l3.25 3.25a.75.75 0 010 1.06z" clipRule="evenodd" />
+    <svg
+      className={cn('h-4 w-4', className)}
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fillRule="evenodd"
+        d="M11.78 9.78a.75.75 0 01-1.06 0L8 7.06 5.28 9.78a.75.75 0 01-1.06-1.06l3.25-3.25a.75.75 0 011.06 0l3.25 3.25a.75.75 0 010 1.06z"
+        clipRule="evenodd"
+      />
     </svg>
   );
 }
@@ -125,9 +153,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
               <SelectPrimitive.ScrollUpButton className="flex cursor-default items-center justify-center py-1">
                 <ChevronUp />
               </SelectPrimitive.ScrollUpButton>
-              <SelectPrimitive.Viewport className="p-1">
-                {children}
-              </SelectPrimitive.Viewport>
+              <SelectPrimitive.Viewport className="p-1">{children}</SelectPrimitive.Viewport>
               <SelectPrimitive.ScrollDownButton className="flex cursor-default items-center justify-center py-1">
                 <ChevronDown />
               </SelectPrimitive.ScrollDownButton>

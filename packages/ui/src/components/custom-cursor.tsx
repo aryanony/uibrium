@@ -24,9 +24,9 @@ export const CustomCursor = () => {
       if (!target) return;
 
       // High-performance hover detection
-      const isSelectable = 
-        target.closest('a') || 
-        target.closest('button') || 
+      const isSelectable =
+        target.closest('a') ||
+        target.closest('button') ||
         target.closest('[role="button"]') ||
         target.closest('.cursor-pointer') ||
         ['INPUT', 'SELECT', 'TEXTAREA'].includes(target.tagName);

@@ -6,8 +6,10 @@ import { cn } from '../../utils/cn';
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
-export interface CheckboxProps
-  extends Omit<React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>, 'color'> {
+export interface CheckboxProps extends Omit<
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>,
+  'color'
+> {
   /** Size of the checkbox */
   size?: 'sm' | 'md' | 'lg';
   /** Color scheme */
@@ -67,7 +69,8 @@ export const Checkbox = React.forwardRef<
     },
     ref,
   ) => {
-    const checkboxId = id || React.useId();
+    const generatedId = React.useId();
+    const checkboxId = id || generatedId;
 
     const checkbox = (
       <CheckboxPrimitive.Root
@@ -123,9 +126,7 @@ export const Checkbox = React.forwardRef<
               {label}
             </label>
           )}
-          {description && (
-            <p className="text-xs text-muted-foreground">{description}</p>
-          )}
+          {description && <p className="text-xs text-muted-foreground">{description}</p>}
         </div>
       </div>
     );

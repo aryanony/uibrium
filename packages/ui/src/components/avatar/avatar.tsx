@@ -60,10 +60,7 @@ const statusColors = {
 
 // ── Component ──────────────────────────────────────────────────────────────────
 
-export const Avatar = React.forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Root>,
-  AvatarProps
->(
+export const Avatar = React.forwardRef<React.ElementRef<typeof AvatarPrimitive.Root>, AvatarProps>(
   (
     {
       className,

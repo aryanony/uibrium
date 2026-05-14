@@ -49,7 +49,7 @@
     "uibrium",
     "typescript"
   ],
-  "author": "UiBrium Team",
+  "author": "Aaryan Gupta (https://github.com/aryanony)",
   "license": "MIT",
   "peerDependencies": {
     "react": ">=18.0.0 || ^19",

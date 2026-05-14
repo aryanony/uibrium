@@ -2,15 +2,16 @@
 
 import React from 'react';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { cn } from '../../utils/cn';
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
 export interface DialogProps extends DialogPrimitive.DialogProps {}
 
-export interface DialogContentProps
-  extends React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content> {
+export interface DialogContentProps extends React.ComponentPropsWithoutRef<
+  typeof DialogPrimitive.Content
+> {
   /** Size of the modal */
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
   /** Show close button */
@@ -53,10 +54,7 @@ export const DialogOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay ref={ref} asChild {...props}>
     <motion.div
-      className={cn(
-        'fixed inset-0 z-50 bg-black/60 backdrop-blur-sm',
-        className,
-      )}
+      className={cn('fixed inset-0 z-50 bg-black/60 backdrop-blur-sm', className)}
       initial="hidden"
       animate="visible"
       exit="hidden"
@@ -112,18 +110,12 @@ export const DialogContent = React.forwardRef<
 ));
 DialogContent.displayName = 'DialogContent';
 
-export const DialogHeader = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
+export const DialogHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
   <div className={cn('flex flex-col gap-1.5 mb-4', className)} {...props} />
 );
 DialogHeader.displayName = 'DialogHeader';
 
-export const DialogFooter = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
+export const DialogFooter = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn('flex flex-col-reverse sm:flex-row sm:justify-end gap-2 mt-6', className)}
     {...props}

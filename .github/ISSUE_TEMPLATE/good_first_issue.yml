@@ -1,92 +1,30 @@
 name: Good First Issue
-description: A beginner-friendly task — perfect for first-time contributors
+description: A beginner-friendly task
 title: "[Good First Issue]: "
 labels: ["good first issue", "beginner-friendly"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ## 🌱 Good First Issue
-
-        This template is for **maintainers** to create beginner-friendly issues.
-        If you're a contributor looking to help, check out our [Contributing Guide](https://github.com/aryanony/uibrium/blob/main/CONTRIBUTING.md).
-
   - type: textarea
-    id: description
     attributes:
       label: Task description
-      description: What needs to be done? Explain clearly so a beginner can understand.
+      description: What needs to be done?
     validations:
       required: true
 
   - type: textarea
-    id: files
     attributes:
       label: Files to edit
-      description: List the specific files that need to be changed.
-      placeholder: |
-        packages/ui/src/components/button/button.tsx
-        packages/ui/src/components/button/button.stories.tsx
-    validations:
-      required: true
+      placeholder: "packages/ui/src/components/button/button.tsx"
 
   - type: textarea
-    id: steps
     attributes:
       label: Step-by-step guide
-      description: Simple, clear steps for a beginner to follow.
-      placeholder: |
-        1. Fork and clone the repository
-        2. Open the file listed above
-        3. Add/change the specific code mentioned
-        4. Run `pnpm build` to verify
-        5. Submit a Pull Request
-    validations:
-      required: true
-
-  - type: textarea
-    id: acceptance
-    attributes:
-      label: Acceptance criteria
-      description: How will we know the task is done correctly?
-      placeholder: |
-        - [ ] Component renders correctly
-        - [ ] TypeScript types are exported
-        - [ ] Dark mode works
-        - [ ] Build passes without errors
-    validations:
-      required: true
+      description: Simple steps for a beginner
 
   - type: checkboxes
-    id: skills
     attributes:
       label: Skills needed
-      description: Check the skills required for this task.
       options:
         - label: Basic React
         - label: TypeScript (basic types only)
         - label: Tailwind CSS
-        - label: Writing docs / markdown
-        - label: Storybook
-        - label: Accessibility (WAI-ARIA)
-
-  - type: dropdown
-    id: difficulty
-    attributes:
-      label: Estimated difficulty
-      options:
-        - Very Easy (< 15 min)
-        - Easy (15-30 min)
-        - Medium (30-60 min)
-        - Hard (1-2 hours)
-    validations:
-      required: true
-
-  - type: input
-    id: mentor
-    attributes:
-      label: Mentor
-      description: Who can the contributor reach out to for help?
-      placeholder: "@aryanony"
-    validations:
-      required: false
+        - label: Writing docs/markdown

@@ -28,19 +28,13 @@ const styles = {
   danger: 'bg-destructive/10 border-destructive/20',
 };
 
-export function Callout({
-  icon,
-  title,
-  children,
-  type = 'default',
-  className,
-}: CalloutProps) {
+export function Callout({ icon, title, children, type = 'default', className }: CalloutProps) {
   return (
     <div
       className={cn(
         'my-6 flex items-start space-x-4 rounded-xl border p-4',
         styles[type],
-        className
+        className,
       )}
     >
       <div className="mt-0.5 shrink-0">{icon || icons[type]}</div>

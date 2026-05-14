@@ -1,14 +1,7 @@
 'use client';
 
 import React from 'react';
-import { 
-  Table, 
-  TableHeader, 
-  TableBody, 
-  TableHead, 
-  TableRow, 
-  TableCell 
-} from '@uibrium/ui';
+import { Table, TableHeader, TableBody, TableHead, TableRow, TableCell } from '@uibrium/ui';
 
 interface PropItem {
   name: string;
@@ -49,9 +42,7 @@ export function PropsTable({ props }: PropsTableProps) {
               <TableCell className="font-mono text-xs text-muted-foreground">
                 {prop.defaultValue || '-'}
               </TableCell>
-              <TableCell className="text-sm text-balance">
-                {prop.description}
-              </TableCell>
+              <TableCell className="text-sm text-balance">{prop.description}</TableCell>
             </TableRow>
           ))}
         </TableBody>

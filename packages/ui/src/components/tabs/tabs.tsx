@@ -16,8 +16,12 @@ export interface TabsProps extends React.ComponentPropsWithoutRef<typeof TabsPri
 }
 
 export interface TabsListProps extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.List> {}
-export interface TabsTriggerProps extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger> {}
-export interface TabsContentProps extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content> {}
+export interface TabsTriggerProps extends React.ComponentPropsWithoutRef<
+  typeof TabsPrimitive.Trigger
+> {}
+export interface TabsContentProps extends React.ComponentPropsWithoutRef<
+  typeof TabsPrimitive.Content
+> {}
 
 // ── Styles ─────────────────────────────────────────────────────────────────────
 
@@ -72,18 +76,13 @@ const TabsVariantContext = React.createContext<{
 
 // ── Components ─────────────────────────────────────────────────────────────────
 
-export const Tabs = React.forwardRef<
-  React.ElementRef<typeof TabsPrimitive.Root>,
-  TabsProps
->(({ variant = 'line', size = 'md', fullWidth = false, className, ...props }, ref) => (
-  <TabsVariantContext.Provider value={{ variant, size, fullWidth }}>
-    <TabsPrimitive.Root
-      ref={ref}
-      className={cn('flex flex-col', className)}
-      {...props}
-    />
-  </TabsVariantContext.Provider>
-));
+export const Tabs = React.forwardRef<React.ElementRef<typeof TabsPrimitive.Root>, TabsProps>(
+  ({ variant = 'line', size = 'md', fullWidth = false, className, ...props }, ref) => (
+    <TabsVariantContext.Provider value={{ variant, size, fullWidth }}>
+      <TabsPrimitive.Root ref={ref} className={cn('flex flex-col', className)} {...props} />
+    </TabsVariantContext.Provider>
+  ),
+);
 Tabs.displayName = 'Tabs';
 
 export const TabsList = React.forwardRef<

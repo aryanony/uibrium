@@ -12,7 +12,11 @@ const RadioGroup = React.forwardRef<
 >(({ className, orientation = 'vertical', ...props }, ref) => {
   return (
     <RadioGroupPrimitive.Root
-      className={cn('flex', orientation === 'vertical' ? 'flex-col gap-2.5' : 'flex-row gap-4', className)}
+      className={cn(
+        'flex',
+        orientation === 'vertical' ? 'flex-col gap-2.5' : 'flex-row gap-4',
+        className,
+      )}
       {...props}
       ref={ref}
     />
@@ -27,7 +31,6 @@ const RadioGroupItem = React.forwardRef<
     size?: 'sm' | 'md' | 'lg';
   }
 >(({ className, color = 'primary', size = 'md', ...props }, ref) => {
-  
   const sizeStyles = {
     sm: 'h-3.5 w-3.5',
     md: 'h-4 w-4',
@@ -39,14 +42,14 @@ const RadioGroupItem = React.forwardRef<
     md: 'h-2 w-2',
     lg: 'h-2.5 w-2.5',
   };
-  
+
   const colorStyles = {
     primary: 'border-primary text-primary focus-visible:ring-primary',
     secondary: 'border-secondary text-secondary focus-visible:ring-secondary',
     success: 'border-success text-success focus-visible:ring-success',
     warning: 'border-warning text-warning focus-visible:ring-warning',
     destructive: 'border-destructive text-destructive focus-visible:ring-destructive',
-  }
+  };
 
   return (
     <RadioGroupPrimitive.Item
@@ -57,12 +60,12 @@ const RadioGroupItem = React.forwardRef<
         'disabled:cursor-not-allowed disabled:opacity-50',
         sizeStyles[size],
         colorStyles[color],
-        className
+        className,
       )}
       {...props}
     >
       <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
-        <span className={cn("rounded-full bg-current", indicatorSizes[size])} />
+        <span className={cn('rounded-full bg-current', indicatorSizes[size])} />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
   );

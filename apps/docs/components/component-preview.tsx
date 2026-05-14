@@ -47,13 +47,16 @@ export function ComponentPreview({
             </TabsTrigger>
           </TabsList>
         </div>
-        <TabsContent value="preview" className="relative rounded-md border min-h-[200px] bg-grid-black/[0.02] dark:bg-grid-white/[0.02]">
+        <TabsContent
+          value="preview"
+          className="relative rounded-md border min-h-[200px] bg-grid-black/[0.02] dark:bg-grid-white/[0.02]"
+        >
           <div
             className={cn(
               'flex items-center p-10',
               align === 'center' && 'justify-center',
               align === 'start' && 'justify-start',
-              align === 'end' && 'justify-end'
+              align === 'end' && 'justify-end',
             )}
           >
             {children}
@@ -65,7 +68,7 @@ export function ComponentPreview({
               onClick={copyToClipboard}
               className={cn(
                 'absolute right-4 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-md border bg-background transition-all hover:bg-muted',
-                hasCopied ? 'border-success text-success' : 'border-border text-muted-foreground'
+                hasCopied ? 'border-success text-success' : 'border-border text-muted-foreground',
               )}
             >
               {hasCopied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}

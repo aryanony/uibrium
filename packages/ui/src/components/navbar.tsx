@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -14,7 +14,13 @@ export interface NavbarProps {
   githubUrl?: string;
 }
 
-export function Navbar({ className, logo, logoLight, logoDark, githubUrl = "https://github.com/aryanony/uibrium.git" }: NavbarProps) {
+export function Navbar({
+  className,
+  logo,
+  logoLight,
+  logoDark,
+  githubUrl = 'https://github.com/aryanony/uibrium.git',
+}: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -34,13 +40,13 @@ export function Navbar({ className, logo, logoLight, logoDark, githubUrl = "http
   ];
 
   return (
-    <header 
+    <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
-        isScrolled 
-          ? "bg-background/80 backdrop-blur-xl border-border py-3" 
-          : "bg-transparent border-transparent py-5",
-        className
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
+        isScrolled
+          ? 'bg-background/80 backdrop-blur-xl border-border py-3'
+          : 'bg-transparent border-transparent py-5',
+        className,
       )}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -50,24 +56,28 @@ export function Navbar({ className, logo, logoLight, logoDark, githubUrl = "http
             <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-50" />
             <div className="relative z-10 w-full h-full flex items-center justify-center p-2">
               <div className="dark:hidden flex items-center justify-center w-full h-full">
-                {logoLight || logo || "Ui"}
+                {logoLight || logo || 'Ui'}
               </div>
               <div className="hidden dark:flex items-center justify-center w-full h-full">
-                {logoDark || logo || "Ui"}
+                {logoDark || logo || 'Ui'}
               </div>
             </div>
           </div>
           <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tighter leading-none group-hover:text-primary transition-colors">UiBrium</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] font-black text-muted-foreground opacity-50">Equilibrium</span>
+            <span className="text-xl font-bold tracking-tighter leading-none group-hover:text-primary transition-colors">
+              UiBrium
+            </span>
+            <span className="text-[10px] uppercase tracking-[0.2em] font-black text-muted-foreground opacity-50">
+              Equilibrium
+            </span>
           </div>
         </a>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
+            <a
+              key={link.name}
               href={link.href}
               className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors relative group"
             >
@@ -90,9 +100,9 @@ export function Navbar({ className, logo, logoLight, logoDark, githubUrl = "http
               <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
-          
+
           {/* Mobile Toggle */}
-          <button 
+          <button
             className="md:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -112,8 +122,8 @@ export function Navbar({ className, logo, logoLight, logoDark, githubUrl = "http
           >
             <div className="p-6 space-y-4">
               {navLinks.map((link) => (
-                <a 
-                  key={link.name} 
+                <a
+                  key={link.name}
                   href={link.href}
                   className="block text-lg font-bold text-foreground hover:text-primary transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -122,8 +132,15 @@ export function Navbar({ className, logo, logoLight, logoDark, githubUrl = "http
                 </a>
               ))}
               <div className="pt-6 border-t border-border flex items-center justify-between">
-                <span className="text-xs uppercase tracking-widest font-black text-muted-foreground">Open Source Legacy</span>
-                <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
+                <span className="text-xs uppercase tracking-widest font-black text-muted-foreground">
+                  Open Source Legacy
+                </span>
+                <a
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground"
+                >
                   <Github className="w-6 h-6" />
                 </a>
               </div>
@@ -134,4 +151,3 @@ export function Navbar({ className, logo, logoLight, logoDark, githubUrl = "http
     </header>
   );
 }
-

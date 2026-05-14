@@ -27,8 +27,17 @@ export const metadata: Metadata = {
     default: 'UiBrium | Architecting Equilibrium',
     template: '%s | UiBrium',
   },
-  description: 'A production-grade design sanctuary for modern developers. Architecting the future of the web with Deterministic Integrity and Unforgettable Emotional Resonance.',
-  keywords: ['React', 'UI', 'Component Library', 'Design System', 'Tailwind CSS', 'TypeScript', 'UiBrium'],
+  description:
+    'A production-grade design sanctuary for modern developers. Architecting the future of the web with Deterministic Integrity and Unforgettable Emotional Resonance.',
+  keywords: [
+    'React',
+    'UI',
+    'Component Library',
+    'Design System',
+    'Tailwind CSS',
+    'TypeScript',
+    'UiBrium',
+  ],
   metadataBase: new URL('https://uibrium.com'),
   openGraph: {
     title: 'UiBrium | Architecting Equilibrium',
@@ -60,46 +69,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="grain pointer-events-none" />
         <Preloader />
         <CustomCursor />
-        <Navbar 
-          logo={
-            <Image 
-              src="/logo_icon.png" 
-              alt="UiBrium Icon" 
-              width={24} 
-              height={24} 
-            />
-          }
+        <Navbar
+          logo={<Image src="/logo_icon.png" alt="UiBrium Icon" width={24} height={24} />}
           logoLight={
-            <Image 
-              src="/logo.png" 
-              alt="UiBrium" 
-              width={100} 
-              height={24} 
+            <Image
+              src="/logo.png"
+              alt="UiBrium"
+              width={100}
+              height={24}
               className="object-contain"
             />
           }
           logoDark={
-            <Image 
-              src="/logo.png" 
-              alt="UiBrium" 
-              width={100} 
-              height={24} 
+            <Image
+              src="/logo.png"
+              alt="UiBrium"
+              width={100}
+              height={24}
               className="object-contain invert brightness-200"
             />
           }
         />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer 
+        <main className="min-h-screen">{children}</main>
+        <Footer
           logo={
             <div className="flex items-center gap-2">
-              <Image 
-                src="/logo_icon.png" 
-                alt="UiBrium Icon" 
-                width={20} 
-                height={20} 
-              />
+              <Image src="/logo_icon.png" alt="UiBrium Icon" width={20} height={20} />
               <span className="font-bold tracking-tighter">UiBrium</span>
             </div>
           }
@@ -108,4 +103,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-
