@@ -97,7 +97,7 @@ export default {
               </pre>
             </div>
             <Callout type="warning" className="mt-4">
-              Ensure this import is placed after your global tailwind directives to avoid CSS
+              Ensure this import is placed after your global Tailwind directives to avoid CSS
               specificity issues.
             </Callout>
           </Step>
